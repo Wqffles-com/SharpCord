@@ -17,4 +17,8 @@
       <ProjectReference Include="..\SharpCord.Core\SharpCord.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Entities\" />
+    </ItemGroup>
+
 </Project>

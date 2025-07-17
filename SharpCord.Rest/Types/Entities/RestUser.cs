@@ -4,7 +4,7 @@ using JetBrains.Annotations;
 using SharpCord.Core.Types.Enums;
 using SharpCord.Core.Types.Interfaces;
 
-namespace SharpCord.Rest.Entities;
+namespace SharpCord.Rest.Types.Entities;
 
 [PublicAPI]
 public class RestUser : IRestEntity, IUser

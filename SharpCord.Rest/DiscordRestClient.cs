@@ -2,7 +2,9 @@
 using System.Text.Json;
 using JetBrains.Annotations;
 using SharpCord.Core.Types.Interfaces;
-using SharpCord.Rest.Entities;
+using SharpCord.Core.Types.Structs;
+using SharpCord.Rest.Types.Entities;
+using SharpCord.Rest.Types.Exceptions;
 
 namespace SharpCord.Rest;
 
@@ -51,9 +53,12 @@ public class DiscordRestClient : IDisposable, IAsyncDisposable
     {
         var request = new HttpRequestMessage(HttpMethod.Get, endpoint);
         var response = await _client.SendAsync(request);
-        response.EnsureSuccessStatusCode();
-
-        return await response.Content.ReadAsAsync<T>() ?? throw new JsonException("Failed to parse JSON.");
+        
+        if (response.IsSuccessStatusCode)
+            return await response.Content.ReadAsAsync<T>() ?? throw new JsonException("Failed to parse JSON.");
+        
+        var errors = await response.Content.ReadAsAsync<DiscordErrorResponse>();
+        throw new HttpException(response.StatusCode, endpoint, errors);
     }
 
     public async Task<(T? result, bool success, Exception? exception)> TryGetAsync<T>(DiscordApiEndpoint endpoint)
