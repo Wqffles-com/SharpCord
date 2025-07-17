@@ -1,9 +1,7 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
+﻿using System.Net.Http.Headers;
 using System.Text.Json;
 using JetBrains.Annotations;
-using SharpCord.Core;
+using SharpCord.Core.Types.Interfaces;
 using SharpCord.Rest.Entities;
 
 namespace SharpCord.Rest;

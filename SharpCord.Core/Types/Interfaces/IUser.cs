@@ -1,10 +1,13 @@
 using System.Text.Json.Serialization;
+using JetBrains.Annotations;
+using SharpCord.Core.Types.Enums;
 
-namespace SharpCord.Core;
+namespace SharpCord.Core.Types.Interfaces;
 
 /// <summary>
 /// Represents a Discord user
-/// </summary>
+/// </summary>a
+[PublicAPI]
 public interface IUser : IHasSnowflake
 {
     /// <summary>

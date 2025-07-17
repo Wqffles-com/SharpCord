@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
-using SharpCord.Core;
+using SharpCord.Core.Types.Enums;
+using SharpCord.Core.Types.Interfaces;
 
 namespace SharpCord.Rest.Entities;
 

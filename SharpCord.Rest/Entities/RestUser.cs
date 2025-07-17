@@ -1,7 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 using JetBrains.Annotations;
-using SharpCord.Core;
+using SharpCord.Core.Types.Enums;
+using SharpCord.Core.Types.Interfaces;
 
 namespace SharpCord.Rest.Entities;
 
