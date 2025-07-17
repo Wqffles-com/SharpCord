@@ -77,11 +77,11 @@ public class DiscordRestClient : IDisposable, IAsyncDisposable
 
     public Task<(RestUser? entity, bool result, Exception? exception)> TryGetMe() => TryGetAsync<RestUser>(DiscordApiEndpoint.GetSelfUser);
 
-    public Task<RestUser> GetUser(ulong id) => GetAsync<RestUser>(DiscordApiEndpoint.GetUser.WithParameters(id.ToString()));
-    public Task<(RestUser? entity, bool result, Exception? exception)> TryGetUser(ulong id) => TryGetAsync<RestUser>(DiscordApiEndpoint.GetUser.WithParameters(id.ToString()));
+    public Task<RestUser> GetUserAsync(ulong id) => GetAsync<RestUser>(DiscordApiEndpoint.GetUser.WithParameters(id.ToString()));
+    public Task<(RestUser? entity, bool result, Exception? exception)> TryGetUserAsync(ulong id) => TryGetAsync<RestUser>(DiscordApiEndpoint.GetUser.WithParameters(id.ToString()));
 
-    public Task<RestGuild> GetGuild(ulong id) => GetAsync<RestGuild>(DiscordApiEndpoint.GetGuild.WithParameters(id.ToString()));
-    public Task<(RestGuild? entity, bool result, Exception? exception)> TryGetGuild(ulong id) => TryGetAsync<RestGuild>(DiscordApiEndpoint.GetGuild.WithParameters(id.ToString()));
+    public Task<RestGuild> GetGuildAsync(ulong id) => GetAsync<RestGuild>(DiscordApiEndpoint.GetGuild.WithParameters(id.ToString()));
+    public Task<(RestGuild? entity, bool result, Exception? exception)> TryGetGuildAsync(ulong id) => TryGetAsync<RestGuild>(DiscordApiEndpoint.GetGuild.WithParameters(id.ToString()));
 
     public void Dispose()
     {
