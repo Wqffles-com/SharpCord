@@ -1,6 +1,6 @@
 using JetBrains.Annotations;
 
-namespace SharpCord.Core;
+namespace SharpCord.Core.Types.Enums;
 
 [PublicAPI]
 public enum GuildVerificationLevel

@@ -1,8 +1,11 @@
-namespace SharpCord.Core;
+using JetBrains.Annotations;
+
+namespace SharpCord.Core.Types.Interfaces;
 
 /// <summary>
 /// Represents any Discord entity that has a snowflake ID.
 /// </summary>
+[PublicAPI]
 public interface IHasSnowflake
 {
     /// <summary>

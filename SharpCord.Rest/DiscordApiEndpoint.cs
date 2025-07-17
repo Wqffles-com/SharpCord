@@ -1,5 +1,3 @@
-using System.Net;
-using System.Runtime.InteropServices;
 using JetBrains.Annotations;
 
 namespace SharpCord.Rest;

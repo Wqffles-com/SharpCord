@@ -1,5 +1,8 @@
-namespace SharpCord.Core;
+using JetBrains.Annotations;
 
+namespace SharpCord.Core.Types.Enums;
+
+[PublicAPI]
 public enum MfaLevel
 {
     /// <summary>
